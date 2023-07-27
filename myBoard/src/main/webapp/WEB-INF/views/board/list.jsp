@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list</title>
+</head>
+<body>
+	<form name="userform">
+		<h1>List page</h1>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">ID</th>
+					<th scope="col">성함</th>
+					<th scope="col">목표</th>
+					<th scope="col">작성일</th>
+					<th scope="col">작성시간</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<c:forEach items="${list}" var="list">
+					<tr>
+						<td class="text_ct">${list.no}&nbsp;</td>
+						<td class="text_ct">${list.id}&nbsp;</td>
+						<td class="text_ct">${list.name}&nbsp;</td>
+						<td class="text_ct">${list.goal}&nbsp;</td>
+						<td class="text_ct"><fmt:formatDate value="${list.date}"
+								pattern="yyyy/MM/dd" /></td>
+						<td class="text_ct"><fmt:formatDate value="${list.time}"
+								pattern="HH/mm/ss" /></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
