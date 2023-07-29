@@ -9,4 +9,10 @@
   				no, id, name, goal, date, time
   			from i_can_do_it
   		</select>
+  		
+  		<!-- 게시물 등록 -->
+  		<insert id="create">
+  			insert into i_can_do_it (id,name,goal,date,time)
+  			values (#{id}, #{name}, #{goal}, NOW(), NOW())
+  		</insert>
   </mapper>

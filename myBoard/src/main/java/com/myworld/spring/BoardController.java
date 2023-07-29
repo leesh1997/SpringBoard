@@ -26,4 +26,18 @@ public class BoardController {
 			// board/list.jsp로 포워딩
 			return "board/list";
 		}
+		
+		//게시물 작성 페이지로 이동
+		@RequestMapping(value = "/create", method = RequestMethod.GET)
+		public String getcreate() throws Exception {
+			return "board/create";
+		}
+		
+		//게시물 작성 post
+		@RequestMapping(value = "/create", method = RequestMethod.POST)
+		public String postcreate(BoardVO vo) throws Exception {
+			service.create(vo);
+			return "redirect:list";
+		}
+		
 }

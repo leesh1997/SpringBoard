@@ -6,4 +6,5 @@ import com.board.domain.BoardVO;
 
 public interface boardDAO {
 	public List<BoardVO> list();//조회
+	public void create(BoardVO vo);//쓰기
 }

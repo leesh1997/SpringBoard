@@ -20,5 +20,10 @@ public class boardServicelmpl implements boardService {
 	public List<BoardVO> list() {
 		return dao.list();
 	}
+	
+	@Override
+	public void create(BoardVO vo) {
+		dao.create(vo);
+	}
 
 }

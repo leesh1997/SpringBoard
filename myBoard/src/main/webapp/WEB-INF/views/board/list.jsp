@@ -38,6 +38,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		<a href="<c:url value='/board/create'/>" role="button" class="btn btn-outline-info">글쓰기</a>
 	</form>
 </body>
 </html>
