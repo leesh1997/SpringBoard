@@ -22,13 +22,14 @@
 					<th scope="col">작성시간</th>
 				</tr>
 			</thead>
-			
+
 			<tbody>
 				<c:forEach items="${list}" var="list">
 					<tr>
 						<td class="text_ct">${list.no}&nbsp;</td>
 						<td class="text_ct">${list.id}&nbsp;</td>
-						<td class="text_ct">${list.name}&nbsp;</td>
+						<td class="text_ct"><a
+							href="${path}/board/detail?no=${list.no}"> ${list.name}&nbsp;</a></td>
 						<td class="text_ct">${list.goal}&nbsp;</td>
 						<td class="text_ct"><fmt:formatDate value="${list.date}"
 								pattern="yyyy/MM/dd" /></td>
@@ -38,7 +39,8 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<a href="<c:url value='/board/create'/>" role="button" class="btn btn-outline-info">글쓰기</a>
+		<a href="<c:url value='/board/create'/>" role="button"
+			class="btn btn-outline-info">글쓰기</a>
 	</form>
 </body>
 </html>

@@ -26,4 +26,9 @@ public class boardDAOlmpl implements boardDAO {
 	public void create(BoardVO vo) {
 		sql.insert(namespace + ".create", vo);
 	}
+	
+	@Override
+	public BoardVO detail(int no) {
+		return sql.selectOne(namespace + ".detail", no);
+	}
 }

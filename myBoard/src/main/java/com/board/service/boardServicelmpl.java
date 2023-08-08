@@ -25,5 +25,11 @@ public class boardServicelmpl implements boardService {
 	public void create(BoardVO vo) {
 		dao.create(vo);
 	}
+	
+	//게시물 상세내용 불러오기
+	@Override
+	public BoardVO detail(int no) {
+		return dao.detail(no);
+	}
 
 }
