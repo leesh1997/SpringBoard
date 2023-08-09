@@ -32,4 +32,10 @@ public class boardServicelmpl implements boardService {
 		return dao.detail(no);
 	}
 
+	// 게시물 수정
+	@Override
+	public void update(BoardVO vo) {
+		dao.update(vo);
+	}
+	
 }

@@ -8,4 +8,5 @@ public interface boardService {
 	public List<BoardVO> list();
 	public void create(BoardVO vo);
 	public BoardVO detail(int no);
+	public void update(BoardVO vo);
 }

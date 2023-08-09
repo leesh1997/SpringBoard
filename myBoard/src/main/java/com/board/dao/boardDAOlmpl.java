@@ -17,18 +17,29 @@ public class boardDAOlmpl implements boardDAO {
 	
 	private static String namespace = "com.myBoard.mappers.board";
 	
+	// 게시물 목록
 	@Override
 	public List<BoardVO> list() {
 		return sql.selectList(namespace + ".list");
 	}
 
+	// 게시물 등록
 	@Override
 	public void create(BoardVO vo) {
 		sql.insert(namespace + ".create", vo);
 	}
 	
+	// 게시물 상세내용 불러오기
 	@Override
 	public BoardVO detail(int no) {
 		return sql.selectOne(namespace + ".detail", no);
 	}
+	
+	// 게시물 수정
+	@Override
+	public void update(BoardVO vo) {
+		sql.update(namespace + ".update", vo);
+	}
+	
+	
 }

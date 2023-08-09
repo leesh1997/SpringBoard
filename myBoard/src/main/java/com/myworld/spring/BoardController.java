@@ -47,5 +47,21 @@ public class BoardController {
 		model.addAttribute("data", data);
 		return "board/detail";
 	}
+	
+	// 게시물 수정 페이지로 이동
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public String getupdate(int no, Model model) throws Exception {
+		BoardVO data = service.detail(no);
+		model.addAttribute("data", data);
+		return "board/update";
+	}
+	
+	// 게시물 수정 post
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public String postupdate(BoardVO vo) throws Exception {
+		service.update(vo);
+		return "redirect:list";// 리스트로 리다이렉트
+	}
+
 
 }

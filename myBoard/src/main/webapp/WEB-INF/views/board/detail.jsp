@@ -38,5 +38,6 @@
 		</tr>
 
 	</table>
+		<a href="/board/update?no=${data.no }" role="button" class="btn btn=outline-info">수정</a>
 </body>
 </html>

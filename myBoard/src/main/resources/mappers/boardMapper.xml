@@ -21,4 +21,11 @@
 		select no,id,name,goal,date,time
 		from i_can_do_it where no = #{no}
 	</select>
+	
+	<!-- 회원 정보 수정 -->
+	<update id="update">
+		update i_can_do_it
+		set name=#{name}, goal=#{goal}, id=#{id}, time=NOW(), date=NOW()
+		where no=#{no}
+	</update>
 </mapper>
