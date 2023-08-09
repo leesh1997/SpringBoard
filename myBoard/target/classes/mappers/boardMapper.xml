@@ -28,4 +28,11 @@
 		set name=#{name}, goal=#{goal}, id=#{id}, time=NOW(), date=NOW()
 		where no=#{no}
 	</update>
+	
+	<!-- 회원 삭제 -->
+	<delete id="delete">
+		delete from i_can_do_it
+		where no=#{no}
+	</delete>
+	
 </mapper>

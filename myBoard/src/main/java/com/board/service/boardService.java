@@ -9,4 +9,5 @@ public interface boardService {
 	public void create(BoardVO vo);
 	public BoardVO detail(int no);
 	public void update(BoardVO vo);
+	public void delete(String no);
 }

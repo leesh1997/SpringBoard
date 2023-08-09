@@ -41,5 +41,10 @@ public class boardDAOlmpl implements boardDAO {
 		sql.update(namespace + ".update", vo);
 	}
 	
+	// 게시물 삭제
+	@Override
+	public void delete(String no) {
+		sql.delete(namespace + ".delete", no);
+	}
 	
 }

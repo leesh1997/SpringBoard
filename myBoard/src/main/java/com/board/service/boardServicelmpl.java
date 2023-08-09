@@ -38,4 +38,10 @@ public class boardServicelmpl implements boardService {
 		dao.update(vo);
 	}
 	
+	// 게시물 삭제
+	@Override
+	public void delete(String no) {
+		dao.delete(no);
+	}
+	
 }

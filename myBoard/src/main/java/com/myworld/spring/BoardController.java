@@ -3,6 +3,7 @@ package com.myworld.spring;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -63,5 +64,17 @@ public class BoardController {
 		return "redirect:list";// 리스트로 리다이렉트
 	}
 
-
+	// 게시물 선택삭제
+	@RequestMapping(value = "/delete")
+	public String ajaxTest(HttpServletRequest request) {
+		
+		String[] ajaxMsg = request.getParameterValues("valueArr");
+		int size = ajaxMsg.length;
+		for(int i = 0; i < size; i++){
+			service.delete(ajaxMsg[i]);
+			
+		}
+		return "redirect:list";
+	}
+	
 }
